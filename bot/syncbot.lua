@@ -232,12 +232,26 @@ function create_config( )
 	"whitelist",
 	"msg_checks",
         "write",
-        "plugins"
+        "plugins",
+        "time",
+        "time2"
         
     },
-    sudo_users = {Your Id},--Sudo users
+    sudo_users = {174770816},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Put Everything You Like :) ( Don t Forgot Edit plugins/stats.lua]],
+    about_text = [[😎 TeleSync 3.2 Version 😎
+➡️An Administrator The PowerFull Bot Based On TeleSeed And Bilingual Written On Lua⬅️
+
+▶️Sudo Users :
+
+Developer&Founder : @Allwen
+
+#⃣Team Channel :
+✌️ @SyncTeam✌️
+
+❤️Special Thx To :
+Mohammad Fox
+And All My Friends :D]],
     help_text_realm = [[
 Realm Commands:
 
