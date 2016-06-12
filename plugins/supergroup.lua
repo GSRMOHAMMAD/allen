@@ -1033,7 +1033,7 @@ function show_supergroup_settingsmod(msg, target)
   local gp_type = data[tostring(msg.to.id)]['group_type']
   
   local settings = data[tostring(target)]['settings']
-  local text = "Supergroup settings for : ["..msg.to.print_name.."]\n\n\n____________________\n[GROUP OPTION]Lock #links : "..settings.lock_link.."\nLock #contacts: ["..settings.lock_contacts.."]\nLock #flood: ["..settings.flood.."]\nFlood #sensitivity : ["..NUM_MSG_MAX.."]\nLock #spam: ["..settings.lock_spam.."]\nLock #Arabic: ["..settings.lock_arabic.."]\nLock #Member: ["..settings.lock_member.."]\nLock #RTL: ["..settings.lock_rtl.."]\nLock #Tgservice: ["..settings.lock_tgservice.."]\nLock sticker: ["..settings.lock_sticker.."]\nLock #tag(#): ["..settings.tag.."]\nLock #emoji: ["..settings.emoji.."]\nLock #english: ["..settings.english.."]\nLock #fwd(forward): ["..settings.fwd.."]\nLock #reply: ["..settings.reply.."]\nLock #join: ["..settings.join.."]\nLock #username(@): ["..settings.username.."]\nLock #media: ["..settings.media.."]\nLock #fosh: ["..settings.fosh.."]\nLock #leave: ["..settings.leave.."]\nLock #bots: ["..bots_protection.."]\nLock #operator: ["..settings.operator.."]\n____________________\n\n[Group Model And SETTINGS]\n____________________\nLock #etehad: ["..settings.etehad.."]\nLock #ALL: ["..settings.all.."]\nGroup #Model: "..gp_type.."\nGroup #Version : [5.0]#Public: ["..settings.public.."]\n#Strict settings: ["..settings.strict.."]\nGroup #Name : ["..msg.to.print_name.."]\nGroup #ID : ["..msg.to.id.."]\n____________________\n#Requester username : ["..msg.from.username.."]\n#Requester ID : ["..msg.to.peer_id.."]\n\n_______[@Allwen]_______\n#BOT VERSION : [3.0]\n#SETTINGS BY #Allwen\nLike F80 But Writed By Allwen"
+  local text = "Supergroup settings for : ["..msg.to.print_name.."]\n____________________\nGroup Settings\nLock #links : "..settings.lock_link.."\nLock #contacts: ["..settings.lock_contacts.."]\nLock #flood: ["..settings.flood.."]\nFlood #sensitivity : ["..NUM_MSG_MAX.."]\nLock #spam: ["..settings.lock_spam.."]\nLock #Arabic: ["..settings.lock_arabic.."]\nLock #Member: ["..settings.lock_member.."]\nLock #RTL: ["..settings.lock_rtl.."]\nLock #Tgservice: ["..settings.lock_tgservice.."]\nLock #sticker: ["..settings.lock_sticker.."]\nLock #tag(#): ["..settings.tag.."]\nLock #emoji: ["..settings.emoji.."]\nLock #english: ["..settings.english.."]\nLock #fwd(forward): ["..settings.fwd.."]\nLock #reply: ["..settings.reply.."]\nLock #join: ["..settings.join.."]\nLock #username(@): ["..settings.username.."]\nLock #media: ["..settings.media.."]\nLock #fosh: ["..settings.fosh.."]\nLock #leave: ["..settings.leave.."]\nLock #bots: ["..bots_protection.."]\nLock #operator: ["..settings.operator.."]\n____________________\nLock #etehad: ["..settings.etehad.."]\nLock #ALL: ["..settings.all.."]\nGroup #Type: "..gp_type.."\nGroup #Version : [3.2]Group #Public: ["..settings.public.."]\nStrict #settings: ["..settings.strict.."]\nGroup #Name : ["..msg.to.print_name.."]\nGroup #ID : ["..msg.to.id.."]\n____________________\n#Requester username : ["..msg.from.username.."]\n#Requester ID : ["..msg.to.peer_id.."]\n\n_______[@TeleSync]_______\n#BOT VERSION : [3.2]\n#SETTINGS BY #Allwen\n"
   return text
 end
 
@@ -1580,7 +1580,7 @@ local function run(msg, matches)
 			if not is_admin1(msg) then
 				return
 			end
-			return "Already a SuperGroup"
+			return "Already a SuperGroup And You Can t Udate Again The Group"
 		end
 	end
 	if msg.to.type == 'channel' then
@@ -1736,7 +1736,7 @@ local function run(msg, matches)
 				resolve_username(username,  callbackres, cbres_extra)
 			else
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup ID")
-				return ">Your Name: " ..string.gsub(msg.from.print_name, "_", " ").. "\n>Your Username: @"..(msg.from.username or '----').."\n>Your ID: "..msg.from.id.."\n\n>SuperGroup Name: " ..string.gsub(msg.to.print_name, "_", " ").. "\n>SuperGroup ID: "..msg.to.id
+				return "Your #Name: " ..string.gsub(msg.from.print_name, "_", " ").. "\nYour #Username: @"..(msg.from.username or '----').."\nYour #ID: "..msg.from.id.."\nYour #Message: "..msg.text.."\nSuperGroup #Name: " ..string.gsub(msg.to.print_name, "_", " ").. "\nSuperGroup ID: "..msg.to.id
 			end
 		end
 
@@ -2628,7 +2628,7 @@ local function run(msg, matches)
 		end
 
 		if matches[1] == 'help' and not is_owner(msg) then
-			text = "Message /superhelp to @antispam_shield in private for SuperGroup help"
+			text = "Send /superhelp in private @TeleSync Or wait for group owner"
 			reply_msg(msg.id, text, ok_cb, false)
 		elseif matches[1] == 'help' and is_owner(msg) then
 			local name_log = user_print_name(msg.from)
