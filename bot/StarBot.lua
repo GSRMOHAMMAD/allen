@@ -234,24 +234,31 @@ function create_config( )
         "write",
         "plugins",
         "time",
-        "time2"
+        "time2",
+        "star"
         
     },
-    sudo_users = {174770816},--Sudo users
+    sudo_users = {174770816,220999520},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[😎 TeleSync 3.2 Version 😎
-➡️An Administrator The PowerFull Bot Based On TeleSeed And Bilingual Written On Lua⬅️
+    about_text = [[😎 Star Bot 😎
 
-▶️Sudo Users :
+💠An advence Telegram Bot Based On Lua And Dev By Star Team💠
 
-Developer&Founder : @Allwen
+❗️Sudo Users
+@Fealman [Founder]
+@Allwen [Developer,Manager]
 
-#⃣Team Channel :
-✌️ @SyncTeam✌️
+❗️Admins 
+All Member Of Star Team !
 
-❤️Special Thx To :
-Mohammad Fox
-And All My Friends :D]],
+Our Ch ⬇️
+@StarTeam_Ch
+
+Special Thanks ⬇️
+Allwen
+And All My Friends :D
+
+Copuright © Star Team 🌟]],
     help_text_realm = [[
 Realm Commands:
 
