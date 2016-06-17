@@ -235,10 +235,11 @@ function create_config( )
         "plugins",
         "time",
         "time2",
-        "star"
+        "star",
+        "delplugin"
         
     },
-    sudo_users = {174770816,220999520},--Sudo users
+    sudo_users = {207418094,220999520},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[😎 Star Bot 😎
 
