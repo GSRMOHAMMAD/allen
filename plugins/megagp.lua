@@ -799,11 +799,11 @@ local function unlock_group_bots(msg, data, target)
   end
   local group_bots_lock = data[tostring(target)]['settings']['lock_bots']
   if group_bots_lock == 'no' then
-    return 'Bots protection is already disabled'
+    return ' | "..msg.from.id.. | Turned off bot protection of | "..msg.to.print_name.." | '
   else
     data[tostring(target)]['settings']['lock_bots'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Bots protection has been disabled'
+    return ' | "..msg.from.id.. | Turned off bots protection of | "..msg.to.print_name.." | '
   end
 end
 
@@ -813,11 +813,11 @@ local function lock_group_contacts(msg, data, target)
   end
   local group_rtl_lock = data[tostring(target)]['settings']['lock_contacts']
   if group_contacts_lock == 'yes' then
-    return 'Contact posting is already locked'
+    return ' | "..msg.from.id.. | Turned off contact posting of | "..msg.to.print_name.." | '
   else
     data[tostring(target)]['settings']['lock_contacts'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'Contact posting has been locked'
+    return ' | "..msg.from.id.. | Turned on contact posting of | "..msg.to.print_name.." | '
   end
 end
 
@@ -827,11 +827,11 @@ local function unlock_group_contacts(msg, data, target)
   end
   local group_contacts_lock = data[tostring(target)]['settings']['lock_contacts']
   if group_contacts_lock == 'no' then
-    return 'Contact posting is already unlocked'
+    return ' | "..msg.from.id.. | Turned off contact posting of | "..msg.to.print_name.." | '
   else
     data[tostring(target)]['settings']['lock_contacts'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Contact posting has been unlocked'
+    return ' | "..msg.from.id.. | Turned off contact posting of | "..msg.to.print_name.." | '
   end
 end
 
@@ -841,11 +841,11 @@ local function enable_strict_rules(msg, data, target)
   end
   local group_strict_lock = data[tostring(target)]['settings']['strict']
   if group_strict_lock == 'yes' then
-    return 'Settings are already strictly enforced'
+    return ' | "..msg.from.id.. | Turned on strict settings of | "..msg.to.print_name.." | '
   else
     data[tostring(target)]['settings']['strict'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'Settings will be strictly enforced'
+    return ' | "..msg.from.id.. | Turned on strict settings of | "..msg.to.print_name.." | '
   end
 end
 
@@ -855,11 +855,11 @@ local function disable_strict_rules(msg, data, target)
   end
   local group_strict_lock = data[tostring(target)]['settings']['strict']
   if group_strict_lock == 'no' then
-    return 'Settings are not strictly enforced'
+    return ' | "..msg.from.id.. | Turned off strict settings of | "..msg.to.print_name.." | '
   else
     data[tostring(target)]['settings']['strict'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Settings will not be strictly enforced'
+    return ' | "..msg.from.id.. | Turned off strict settings of | "..msg.to.print_name.." | '
   end
 end
 --End supergroup locks
@@ -1033,7 +1033,7 @@ function show_supergroup_settingsmod(msg, target)
   local gp_type = data[tostring(msg.to.id)]['group_type']
   
   local settings = data[tostring(target)]['settings']
-  local text = "🔧Supergroup settings 🔧\n▫Group #name ["..msg.to.print_name.."]\n____________________\n▫Group Settings\n▫Lock #links : "..settings.lock_link.."\n▫Lock #contacts: ["..settings.lock_contacts.."]\n▫Lock #flood: ["..settings.flood.."]\n▫Flood #sensitivity : ["..NUM_MSG_MAX.."]\n▫Lock #spam: ["..settings.lock_spam.."]\n▫Lock #Arabic: ["..settings.lock_arabic.."]\n▫Lock #Member: ["..settings.lock_member.."]\n▫Lock #RTL: ["..settings.lock_rtl.."]\n▫Lock #Tgservice: ["..settings.lock_tgservice.."]\n▫Lock #sticker: ["..settings.lock_sticker.."]\n▫Lock #tag(#): ["..settings.tag.."]\n▫Lock #emoji: ["..settings.emoji.."]\n▫Lock #english: ["..settings.english.."]\n▫Lock #fwd(forward): ["..settings.fwd.."]\n▫Lock #reply: ["..settings.reply.."]\n▫Lock #join: ["..settings.join.."]\n▫Lock #username(@): ["..settings.username.."]\n▫Lock #media: ["..settings.media.."]\n▫Lock #fosh: ["..settings.fosh.."]\n▫Lock #leave: ["..settings.leave.."]\n▫Lock #bots: ["..bots_protection.."]\n▫Lock #operator: ["..settings.operator.."]\n____________________\n🔺Lock #etehad: ["..settings.etehad.."]\n🔻Lock #ALL: ["..settings.all.."]\nGroup #Type: "..gp_type.."\n🔺Group #Version : [3.2]\n🔻Group #Public: ["..settings.public.."]\n🔺Strict #settings: ["..settings.strict.."]\n🔻Group #Name : ["..msg.to.print_name.."]\n🔺Group #ID : ["..msg.to.id.."]\n____________________\n🔹Requester #username : ["..msg.from.username.."]\n🔹Requester #ID : ["..msg.from.id.."]\n___________________\n🔸BOT VERSION : [3.2]\n#SETTINGS BY #Allwen\n"
+  local text = "🔧Supergroup settings 🔧\n▫Group #name ["..msg.to.print_name.."]\n____________________\n▫Group Settings\n▫Lock #links : "..settings.lock_link.."\n▫Lock #contacts: ["..settings.lock_contacts.."]\n▫Lock #flood: ["..settings.flood.."]\n▫Flood #sensitivity : ["..NUM_MSG_MAX.."]\n▫Lock #spam: ["..settings.lock_spam.."]\n▫Lock #Arabic: ["..settings.lock_arabic.."]\n▫Lock #Member: ["..settings.lock_member.."]\n▫Lock #RTL: ["..settings.lock_rtl.."]\n▫Lock #Tgservice: ["..settings.lock_tgservice.."]\n▫Lock #sticker: ["..settings.lock_sticker.."]\n▫Lock #tag(#): ["..settings.tag.."]\n▫Lock #emoji: ["..settings.emoji.."]\n▫Lock #english: ["..settings.english.."]\n▫Lock #fwd(forward): ["..settings.fwd.."]\n▫Lock #reply: ["..settings.reply.."]\n▫Lock #join: ["..settings.join.."]\n▫Lock #username(@): ["..settings.username.."]\n▫Lock #media: ["..settings.media.."]\n▫Lock #fosh: ["..settings.fosh.."]\n▫Lock #leave: ["..settings.leave.."]\n▫Lock #bots: ["..bots_protection.."]\n▫Lock #operator: ["..settings.operator.."]\n____________________\n🔺Lock #etehad: ["..settings.etehad.."]\n🔻Lock #ALL: ["..settings.all.."]\n🔺Group #Type: "..gp_type.."\n🔻Group #Version : [3.2]\n🔺Group #Public: ["..settings.public.."]\n🔻Strict #settings: ["..settings.strict.."]\n🔺Group #Name : ["..msg.to.print_name.."]\n🔻Group #ID : ["..msg.to.id.."]\n____________________\n🔹Requester #username : ["..msg.from.username.."]\n🔹Requester #ID : ["..msg.from.id.."]\n___________________\n🔸BOT VERSION : [3.2]\n#SETTINGS BY #Allwen\n"
   return text
 end
 
@@ -1736,7 +1736,7 @@ local function run(msg, matches)
 				resolve_username(username,  callbackres, cbres_extra)
 			else
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup ID")
-				return "Your #Name: " ..string.gsub(msg.from.print_name, "_", " ").. "\nYour #Username: @"..(msg.from.username or '----').."\nYour #ID: "..msg.from.id.."\nYour #Message: "..msg.text.."\nYour #phone: "..msg.from.phone.."\nSuperGroup #Name: " ..string.gsub(msg.to.print_name, "_", " ").. "\nSuperGroup #ID: "..msg.to.id
+				return "🔺Your #Name: " ..string.gsub(msg.from.print_name, "_", " ").. "\n🔻Your #Username: @"..(msg.from.username or '----').."\n🔺Your #ID: "..msg.from.id.."\nYour #Message: "..msg.text.."\n🔻Your #phone: "..msg.from.phone.."\n🔺SuperGroup #Name: " ..string.gsub(msg.to.print_name, "_", " ").. "\n🔻SuperGroup #ID: "..msg.to.id
 			end
 		end
 
