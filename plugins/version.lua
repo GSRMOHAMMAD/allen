@@ -1,8 +1,8 @@
 function bot(msg)
- return [[Star Bot 🌟
-A Telegram bot based on lua and dev by starteam 🔥
+ return [[Sync Bot 
+A Telegram bot based on lua and dev by allwen 🔥
 
-for other information /star ! 📑]]
+for other information /sync ! 📑]]
 end
 
 function server(msg)
