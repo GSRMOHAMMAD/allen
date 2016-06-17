@@ -6,7 +6,7 @@ end
 
 return {
 patterns = {
-"^![Ss]tar$",
+"^![Ss][Yy][Nn][Cc]$",
 
 },
 run = run
