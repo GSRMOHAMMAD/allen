@@ -236,13 +236,15 @@ function create_config( )
         "time",
         "time2",
         "sync",
-        "delplugin"
+        "delplugin",
+        "qrcode",
+        "infofa",
+        "timefa"      
         
     },
     sudo_users = {207418094},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[😎 S
-TeleSync 😎
+    about_text = [[😎 TeleSync 😎
 
 💠An advence Telegram Bot Based On Lua And Dev By Star Team💠
 
