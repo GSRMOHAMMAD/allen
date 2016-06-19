@@ -235,7 +235,7 @@ function create_config( )
         "plugins",
         "time",
         "time2",
-        "sync",
+        "optima",
         "delplugin",
         "qrcode",
         "infofa",
@@ -244,7 +244,7 @@ function create_config( )
     },
     sudo_users = {207418094},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[😎 TeleSync 😎
+    about_text = [[😎 OptimaTG 😎
 
 💠An advence Telegram Bot Based On Lua And Dev By Star Team💠
 
@@ -255,10 +255,10 @@ function create_config( )
 No Admins !
 
 Our Ch ⬇️
-@SY_CH
+@OptimaTeam
 
 Special Thanks ⬇️
-Allwen
+AmirHo3inf
 And All My Friends :D
 
 Copuright © Allwen ]],
