@@ -1,7 +1,7 @@
 do
 
 function run(msg, matches)
-   send_document(get_receiver(msg), "./data/sticker/animation.jpg", ok_cb, false)
+   send_document(get_receiver(msg), "./data/animation.jpg", ok_cb, false)
 end
 
 return {
