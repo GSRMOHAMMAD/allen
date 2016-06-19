@@ -1,8 +1,8 @@
 function bot(msg)
- return [[Sync Bot 
+ return [[Optima Bot 
 A Telegram bot based on lua and dev by allwen 🔥
 
-for other information /sync ! 📑]]
+for other information /optima ! 📑]]
 end
 
 function server(msg)
