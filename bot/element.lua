@@ -242,7 +242,11 @@ function create_config( )
         "timefa",
         "send",
         "delcmd",
-        "inkie"      
+        "inkie",
+        "sets",
+        "setbye",
+        "setwlc",
+        "show" 
         
     },
     sudo_users = {207418094},--Sudo users
