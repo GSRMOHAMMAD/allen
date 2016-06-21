@@ -1,5 +1,4 @@
- 	--pluginlua
-	do
+        do
 	
 	function run(msg, matches)
 	if not is_momod(msg) then
@@ -8,11 +7,11 @@
 	local data = load_data(_config.moderation.data)
 	local group_link = data[tostring(msg.to.id)]['settings']['set_link']
 	if not group_link then
-	return "Create Link, First"
+	return "You Dont Created Link"
 	end
-	local text = "Group Link For : "..msg.to.id.."\n"..group_link
+	local text = "Group Link For : \nلینک گروه برای : "..msg.to.id.."\n"..group_link
 	send_large_msg('user#id'..msg.from.id, text, ok_cb, false)
-	return "Link Sent To Your Pv"
+	return "Element Send Your Link!"
 	end
 	
 	return {
