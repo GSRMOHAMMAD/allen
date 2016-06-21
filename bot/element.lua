@@ -257,6 +257,7 @@ function create_config( )
 
 ❗️Sudo Users
 @Allwen [Founder,Developer,Manager]
+@Nort_Admin (server dad ba poool)
 
 ❗️Admins 
 No Admins !
