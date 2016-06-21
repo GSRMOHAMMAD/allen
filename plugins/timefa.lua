@@ -5,6 +5,6 @@ resolve = string.gsub(resolve,'#Allwen','#ElementTG')
 return resolve
 end
 return {
-   patterns = {"^[/!]time$"},
+   patterns = {"^[/!][Tt][Ii][Mm][Ee]$"},
    run = run
 }
