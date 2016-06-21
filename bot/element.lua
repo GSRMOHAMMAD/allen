@@ -228,34 +228,34 @@ function create_config( )
     "invite",
     "all",
     "leave_ban",
-	"megagp",
+	"megagroup",
 	"whitelist",
 	"msg_checks",
         "write",
         "plugins",
         "time",
         "time2",
-        "optima",
+        "element",
         "delplugin",
         "qrcode",
         "infofa",
-        "timefa"      
+        "timefa",
+        "send",
+        "delcmd",
+        "inkie"      
         
     },
     sudo_users = {207418094},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[😎 OptimaTG 😎
+    about_text = [[😎 Element 😎
 
-💠An advence Telegram Bot Based On Lua And Dev By Star Team💠
+💠An advence Telegram Bot Based On Lua And Dev By Allwen💠
 
 ❗️Sudo Users
 @Allwen [Founder,Developer,Manager]
 
 ❗️Admins 
 No Admins !
-
-Our Ch ⬇️
-@OptimaTeam
 
 Special Thanks ⬇️
 AmirHo3inf
