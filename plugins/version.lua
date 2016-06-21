@@ -2,7 +2,7 @@ function bot(msg)
  return [[Optima Bot 
 A Telegram bot based on lua and dev by allwen 🔥
 
-for other information /optima ! 📑]]
+for other information /element ! 📑]]
 end
 
 function server(msg)
