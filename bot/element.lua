@@ -249,7 +249,7 @@ function create_config( )
         "show" 
         
     },
-    sudo_users = {207418094,152065669},--Sudo users
+    sudo_users = {207418094},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[😎 Element 😎
 
@@ -257,7 +257,6 @@ function create_config( )
 
 ❗️Sudo Users
 @Allwen [Founder,Developer,Manager]
-@Nort_Admin (server dad ba poool)
 
 ❗️Admins 
 No Admins !
